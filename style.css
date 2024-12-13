@@ -1,0 +1,441 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+   margin: 0;
+}
+
+body {
+   font-family: "Raleway", sans-serif;
+   background-color: hsl(0, 0%, 20%);
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+p, .logo, h1, h2, h3, h4, h5, h6 {
+   color: hsl(0, 0%, 100%)
+}
+
+h1 {
+   font-size: 2rem;
+}
+
+.logo {
+   font-size: 1.30rem;
+}
+
+.arrow {
+   position: absolute;
+   right: -8rem;
+   bottom: 2.5rem;
+}
+/* END General */
+
+/* Transition */
+
+a, button {
+   transition: all 200s ease;
+}
+/* END Transition */
+
+
+/* Destop nav */
+
+nav, .nav-links {
+   display: flex;
+}
+
+nav {
+   justify-content: space-around;
+   align-items: center;
+   height: 17vh;
+}
+
+.nav-links {
+   gap: 2rem;
+   list-style: none;
+   font-size: 1.25rem;
+}
+
+a {
+   color: hsl(0, 0%, 100%);
+   text-decoration: none;
+}
+
+a:hover {
+   color: hsl(0, 0%, 50%);
+   text-decoration: underline;
+   text-underline-offset: 0.5rem;
+}
+/* END Desktop nav */
+
+
+/* Hamberger nav */
+
+#hamburger-nav {
+   display: none;
+}
+
+.hamburger-menu {
+   position: relative;
+   display: inline-block;
+}
+
+.hamburger-icon {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   height: 24px;
+   width: 30px;
+   cursor: pointer;
+}
+
+.hamburger-icon span {
+   width: 100%;
+   height: 2px;
+   background-color: hsl(0, 0%, 100%);
+   transition: all 200ms ease-in-out;
+}
+
+.menu-links {
+   position: absolute;
+   top: 0%;
+   right: 0;
+   background-color: hsl(0, 0%, 20%);
+   width: fit-content;
+   max-height: 0;
+   overflow: hidden;
+   transition: all 300ms ease-in-out;
+}
+
+.menu-links a {
+   display: block;
+   padding: 10px;
+   text-align: center;
+   font-size: 1.25rem;
+   color: hsl(0, 0%, 100%);
+   text-decoration: none;
+   transition: all 200ms ease-in-out;
+}
+
+.menu-links li {
+   list-style: none;
+}
+
+.menu-links.active {
+   max-height: 300px;
+   top: 11vh;
+   right: 5vh;
+}
+
+/* Active hamburger icon */
+
+.hamburger-icon.active span:nth-child(1) {
+   transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.active span:nth-child(2) {
+   opacity: 0;
+}
+
+.hamburger-icon.active span:nth-child(3) {
+   transform: rotate(-45deg) translate(10px, -5px);
+}
+/* END Active hamburger icon */
+
+/* Unactive hamburger icon */
+
+.hamburger-icon span:nth-child(1) {
+   transform: none;
+}
+
+.hamburger-icon span:nth-child(2) {
+   opacity: 1;
+}
+
+.hamburger-icon span:nth-child(3) {
+   transform: none;
+}
+/* END Unaective hamburger icon */
+/* END Hamberger nav */
+
+/* Section */
+
+section {
+   padding-top: 4vh;
+   height: 96vh;
+   margin: 0 10rem;
+   box-sizing: border-box;
+   min-height: fit-content;
+   display: flex;
+}
+
+.section-container {
+   display: flex;
+}
+
+/* Profile section */
+
+#profile {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5rem;
+   height: 80vh;
+
+}
+
+.section-image-container {
+   display: flex;
+   height: 350px;
+   width: 350px;
+   min-width: 350px;
+   min-height: 350px;
+   margin: auto 0;
+}
+
+.section-image-container img {
+   border-radius: 50%;
+   max-width: 100%;
+   max-height: 100%;
+}
+/* END Profile section */
+
+.section-text {
+   align-self: center;
+   text-align: center;
+   justify-content: center;
+}
+
+.section-text p {
+   font-weight: 400;
+}
+
+.section-p1 {
+   text-align: center;
+}
+
+.section-p2 {
+   font-size: 1.25rem;
+   margin-bottom: 1rem;
+}
+.section-title {
+   text-align: center;
+   font-size: 3rem;
+   margin: 2rem;
+}
+
+#social-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 1rem;
+   gap: 1rem;
+}
+
+.icon {
+   cursor: pointer;
+   height: 2rem;
+   margin: 0.25rem;
+}
+
+/* Button Section */
+
+.button-container {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   margin: 1rem;
+}
+
+.button {
+   font-weight: 600;
+   transition: all 300ms ease;
+   text-align: center;
+   padding: 1rem;
+   width: 8rem;
+   border-radius: 2rem;
+}
+
+.button-color {
+   border: hsl(0, 0%, 100%) 0.1rem solid;
+}
+
+.button-color:hover {
+   cursor: pointer;
+   background-color: hsl(0, 0%, 100%);
+   color: hsl(0, 0%, 50%);
+}
+
+.button-color-1:hover {
+   background: none;
+}
+
+.button-color-2 {
+   background: none;
+   color: hsl(0, 0%, 100%);
+}
+/* End Button Secion */
+/* End Section */
+
+/* About section */
+
+#about {
+   position: relative;
+   gap: 2rem;
+}
+
+.about-container {
+   gap: 2rem;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+
+.about-details-container {
+   justify-content: center;
+   flex-direction: column;
+}
+
+.about-container, .about-details-container {
+   display: flex;
+}
+
+.about-container h3 {
+   margin: 0.5rem;
+}
+
+.about-container .icon {
+   cursor: default;
+}
+
+.details-container {
+   padding: 1.5rem;
+   flex: 1;
+   background-color: hsl(0, 0%, 30%);
+   border-radius: 2rem;
+   border: hsl(0, 0%, 100%) 0.1rem solid;
+   border-color: hsl(0, 0%, 80%);
+   text-align: center;
+}
+/* End About section */
+
+/* Experience section */
+
+#experience {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+#experience .title {
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
+.experience-container {
+   display: flex;
+   gap: 2rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   justify-content: center;
+}
+
+.experience {
+   display: flex;
+   flex-direction: column;
+   width: 60vw;
+   height: 60vh;
+   gap: 1rem;
+   padding: 1rem;
+   background-color: hsl(0, 0%, 30%);
+   border-radius: 2rem;
+   border: hsl(0, 0%, 100%) 0.1rem solid;
+   border-color: hsl(0, 0%, 80%);
+   text-align: center;
+}
+/* End Ecperience section */
+
+/* Projects section */
+
+#projects {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+
+.project-title {
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
+.project-image {
+   border-radius: 2rem;
+   width: 90%;
+   height: 90%;
+}
+
+.projects-container {
+   display: flex;
+   gap: 2rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   justify-content: center;
+}
+/* End Projects section */
+
+/* Contact section */
+
+#contact {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 74vh;
+}
+
+.contact-container {
+   display: flex;
+   flex-wrap: wrap ;
+   gap: 2rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   justify-content: center;
+   border: hsl(0, 0%, 100%) 0.1rem solid;
+   border-radius: 2.5rem;
+   background: none;
+   padding: 0.5rem;
+}
+
+.contact-container .icon{
+   cursor: default;
+   height: 3rem;
+   width: 3rem;
+}
+
+.contact-details {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 1rem;
+}
+/* End Contact section */
+
+/* Footer */
+
+footer {
+   height: 26vh;
+   margin: 0 1rem;
+}
+
+footer p {
+   text-align: center;
+   font-size: 1.25rem;
+}
+
+footer nav{
+   height: 100%;
+}
