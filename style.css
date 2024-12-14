@@ -191,17 +191,17 @@ section {
 
 .section-image-container {
    display: flex;
+   margin: auto 0;
+   align-items: center;
+   justify-content: center;
+}
+
+.section-image-container img {
    height: 350px;
    width: 350px;
    min-width: 350px;
    min-height: 350px;
-   margin: auto 0;
-}
-
-.section-image-container img {
    border-radius: 50%;
-   max-width: 100%;
-   max-height: 100%;
 }
 /* END Profile section */
 
@@ -383,6 +383,7 @@ section {
    margin-top: 1rem;
    margin-bottom: 1rem;
    justify-content: center;
+   flex-wrap: wrap;
 }
 /* End Projects section */
 
