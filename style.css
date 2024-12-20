@@ -15,7 +15,7 @@ html {
    scroll-behavior: smooth;
 }
 
-p, .logo, h1, h2, h3, h4, h5, h6 {
+p, .logo, h1, h2, h3, h4, h5, h6 , li{
    color: hsl(0, 0%, 100%)
 }
 
@@ -320,6 +320,25 @@ section {
    border-color: hsl(0, 0%, 80%);
    text-align: center;
 }
+
+.text-list li{
+   color: hsl(0, 0%, 90%);
+   margin-bottom: 0.25rem;
+   text-align: left;
+   padding-left: 1.5rem;
+   text-indent: -22px;
+}
+
+.left-right-align {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.about-container p.text-left {
+   text-align: left;
+   text-indent: 1rem;
+}
 /* End About section */
 
 /* Experience section */
@@ -355,6 +374,18 @@ section {
    border: hsl(0, 0%, 100%) 0.1rem solid;
    border-color: hsl(0, 0%, 80%);
    text-align: center;
+}
+
+.experience.ex2 .skill {
+   text-align: left;
+   margin-left: 1rem;
+}
+
+.space-between {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-top: 0.2rem;
 }
 /* End Ecperience section */
 
